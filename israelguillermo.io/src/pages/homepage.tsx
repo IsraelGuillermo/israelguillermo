@@ -2,7 +2,7 @@ import { Box, Typography, useMediaQuery, useTheme } from '@material-ui/core';
 import classNames from 'classnames';
 import styles from './home.module.css';
 import { useRouter } from 'next/router';
-
+import globalStyles from '../styles/globals.module.css';
 export function HomePage() {
   const theme = useTheme();
   const smallScreen = useMediaQuery(theme.breakpoints.down('sm'));
@@ -38,9 +38,13 @@ export function HomePage() {
         </Box>
         <Box>
           <Box style={{ marginBottom: 16 }}>
-            <Typography variant='h1' >Hello</Typography>
-            <Typography variant='h3'>A bit about me </Typography>
-            <Typography variant='body1'>
+            <Typography style={{ fontFamily: styles.typography }} variant='h1'>
+              Hello
+            </Typography>
+            <Typography style={{ fontFamily: styles.typography }} variant='h3'>
+              A bit about me
+            </Typography>
+            <Typography style={{ fontFamily: styles.typography }} variant='h6'>
               I am a skilled front end developer with years of experience in
               Typescript, React and React Native.
             </Typography>
@@ -56,7 +60,12 @@ export function HomePage() {
               }}
               onClick={() => router.push('/resume')}
             >
-              <Typography variant='h5'>Resume</Typography>
+              <Typography
+                style={{ fontFamily: styles.typography }}
+                variant='h5'
+              >
+                Resume
+              </Typography>
             </Box>
             <Box
               className={styles.circleContainer}
@@ -67,7 +76,12 @@ export function HomePage() {
               }}
               onClick={() => router.push('/projects')}
             >
-              <Typography variant='h5'>Projects</Typography>
+              <Typography
+                style={{ fontFamily: styles.typography }}
+                variant='h5'
+              >
+                Projects
+              </Typography>
             </Box>
             <Box
               className={styles.circleContainer}
@@ -78,7 +92,12 @@ export function HomePage() {
               }}
               onClick={() => router.push('/contact')}
             >
-              <Typography variant='h5'>Contact</Typography>
+              <Typography
+                style={{ fontFamily: styles.typography }}
+                variant='h5'
+              >
+                Contact
+              </Typography>
             </Box>
           </Box>
         </Box>

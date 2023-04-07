@@ -30,7 +30,12 @@ export default function AppNavBar() {
       <Box className={styles.navbar}>
         <Toolbar>
           <Link href='/' style={{ textDecoration: 'none' }}>
-            <Typography variant='h6' noWrap className={styles.navName}>
+            <Typography
+              style={{ fontFamily: styles.typography }}
+              variant='h6'
+              noWrap
+              className={styles.navName}
+            >
               Israel Guillermo
             </Typography>
           </Link>

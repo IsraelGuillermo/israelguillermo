@@ -29,3 +29,7 @@
     transform: translate3d(0, 25px, 0);
   }
 }
+
+.typography {
+  font-family: 'Raleway', sans-serif;
+}
