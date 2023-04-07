@@ -1,12 +1,15 @@
 import {
   Box,
   IconButton,
+  Link,
   Menu,
   MenuItem,
+  Typography,
   useMediaQuery,
   useTheme
 } from '@material-ui/core';
-import zIndex from '@material-ui/core/styles/zIndex';
+import { useRouter } from 'next/router';
+import styles from './styles.module.css';
 
 interface Props {
   open: boolean;
@@ -15,6 +18,7 @@ interface Props {
 export function MobileMenu({ open }: Props) {
   const theme = useTheme();
   const smallScreen = useMediaQuery(theme.breakpoints.down('sm'));
+  const router = useRouter();
   return open && smallScreen ? (
     <Box
       style={{
@@ -29,21 +33,37 @@ export function MobileMenu({ open }: Props) {
       }}
     >
       <>
-        <MenuItem>
-          <IconButton aria-label='show 4 new mails' color='inherit'>
+        <Link
+          style={{
+            color: 'inherit'
+          }}
+          href='/resume'
+        >
+          <Typography variant='subtitle1' style={{ fontWeight: 'lighter' }}>
             Resume
-          </IconButton>
-        </MenuItem>
-        <MenuItem>
-          <IconButton aria-label='show 4 new mails' color='inherit'>
+          </Typography>
+        </Link>
+
+        <Link
+          style={{
+            color: 'inherit'
+          }}
+          href='/projects'
+        >
+          <Typography variant='subtitle1' style={{ fontWeight: 'lighter' }}>
             Projects
-          </IconButton>
-        </MenuItem>
-        <MenuItem>
-          <IconButton aria-label='show 4 new mails' color='inherit'>
+          </Typography>
+        </Link>
+        <Link
+          style={{
+            color: 'inherit'
+          }}
+          href='/contact'
+        >
+          <Typography variant='subtitle1' style={{ fontWeight: 'lighter' }}>
             Contact
-          </IconButton>
-        </MenuItem>
+          </Typography>
+        </Link>
       </>
     </Box>
   ) : null;

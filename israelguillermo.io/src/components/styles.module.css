@@ -18,8 +18,8 @@
 }
 
 .middleNavButton {
-  border-right: black solid 1px;
-  border-left: black solid 1px;
+  border-right: grey solid 1px;
+  border-left: grey solid 1px;
   padding-left: 24px;
   padding-right: 24px;
 }

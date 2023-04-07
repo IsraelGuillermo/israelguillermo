@@ -31,14 +31,14 @@ export function HomePage() {
         <Box style={{ marginRight: 24, marginTop: 50 }}>
           <img
             alt='Israel Guillermo'
-            src='https://avatars.githubusercontent.com/u/65478257?s=400&u=4d838c4a721fa7ec7cc76322ded8222329ea6ace&v=4'
+            src='/israel.JPEG'
             width={smallScreen ? '300px' : '400px'}
             style={{ borderRadius: '50%' }}
           />
         </Box>
         <Box>
           <Box style={{ marginBottom: 16 }}>
-            <Typography variant='h1'>Hello</Typography>
+            <Typography variant='h1' >Hello</Typography>
             <Typography variant='h3'>A bit about me </Typography>
             <Typography variant='body1'>
               I am a skilled front end developer with years of experience in

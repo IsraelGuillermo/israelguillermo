@@ -1,7 +1,7 @@
 import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Box, useMediaQuery, useTheme } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
 import { MobileMenu } from './MobileMenu';
@@ -9,7 +9,7 @@ import CloseIcon from '@material-ui/icons/Close';
 import styles from './styles.module.css';
 import classNames from 'classnames';
 import Link from 'next/link';
-import HomeIcon from '@material-ui/icons/Home';
+
 import { useRouter } from 'next/router';
 export default function AppNavBar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -20,16 +20,20 @@ export default function AppNavBar() {
   const theme = useTheme();
   const smallScreen = useMediaQuery(theme.breakpoints.down('sm'));
   const router = useRouter();
+
+  useEffect(() => {
+    setIsMobileMenuOpen(false);
+  }, [router]);
+
   return (
     <Box className={styles.grow} position='static'>
       <Box className={styles.navbar}>
         <Toolbar>
-          <Link href='/'>
-            <HomeIcon />
+          <Link href='/' style={{ textDecoration: 'none' }}>
+            <Typography variant='h6' noWrap className={styles.navName}>
+              Israel Guillermo
+            </Typography>
           </Link>
-          <Typography variant='h6' noWrap className={styles.navName}>
-            Israel Guillermo
-          </Typography>
 
           {smallScreen ? (
             <>
