@@ -1,0 +1,36 @@
+.navbarButton:hover {
+  cursor: pointer;
+  color: #e4a92a !important;
+}
+.navbarButton {
+  color: inherit;
+}
+
+.grow {
+  flex-grow: 1;
+}
+
+.navbar {
+  background-color: transparent;
+  color: grey;
+  width: 100%;
+  align-items: center;
+}
+
+.middleNavButton {
+  border-right: black solid 1px;
+  border-left: black solid 1px;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.navbarButtonContainer {
+  display: flex;
+  width: 300px;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.navName {
+  color: black;
+}

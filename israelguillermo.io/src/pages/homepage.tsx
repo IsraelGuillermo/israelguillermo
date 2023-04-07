@@ -1,10 +1,14 @@
 import { Box, Typography, useMediaQuery, useTheme } from '@material-ui/core';
+import classNames from 'classnames';
+import styles from './home.module.css';
+import { useRouter } from 'next/router';
 
 export function HomePage() {
   const theme = useTheme();
   const smallScreen = useMediaQuery(theme.breakpoints.down('sm'));
   const flexDirection = smallScreen ? 'column-reverse' : 'row';
 
+  const router = useRouter();
   return (
     <Box
       style={{
@@ -41,54 +45,40 @@ export function HomePage() {
               Typescript, React and React Native.
             </Typography>
           </Box>
-          <Box
-            style={{
-              display: 'flex',
-              justifyContent: 'space-between',
-              alignItems: 'center'
-            }}
-          >
+
+          <Box className={styles.containerCircles}>
             <Box
+              className={classNames(styles.circleContainer, styles.bounce)}
               style={{
                 height: smallScreen ? '100px' : '150px',
                 width: smallScreen ? '100px' : '150px',
-                backgroundColor: '#80D8DA',
-                borderRadius: '50%',
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-                border: 'solid grey 1px'
+                backgroundColor: '#80D8DA'
               }}
+              onClick={() => router.push('/resume')}
             >
-              <Typography variant='body1'>Resume</Typography>
+              <Typography variant='h5'>Resume</Typography>
             </Box>
             <Box
+              className={styles.circleContainer}
               style={{
                 height: smallScreen ? '100px' : '150px',
                 width: smallScreen ? '100px' : '150px',
-                backgroundColor: '#EEA302',
-                borderRadius: '50%',
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-                border: 'solid grey 1px'
+                backgroundColor: '#EEA302'
               }}
+              onClick={() => router.push('/projects')}
             >
-              <Typography variant='body1'>Projects</Typography>
+              <Typography variant='h5'>Projects</Typography>
             </Box>
             <Box
+              className={styles.circleContainer}
               style={{
                 height: smallScreen ? '100px' : '150px',
                 width: smallScreen ? '100px' : '150px',
-                backgroundColor: '#ff3b25',
-                borderRadius: '50%',
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-                border: 'solid grey 1px'
+                backgroundColor: '#ff3b25'
               }}
+              onClick={() => router.push('/contact')}
             >
-              <Typography variant='body1'>Contact</Typography>
+              <Typography variant='h5'>Contact</Typography>
             </Box>
           </Box>
         </Box>

@@ -1,31 +1,17 @@
-import {
-  alpha,
-  makeStyles,
-  Theme,
-  createStyles
-} from '@material-ui/core/styles';
 import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
-import Badge from '@material-ui/core/Badge';
-import MenuItem from '@material-ui/core/MenuItem';
-import Menu from '@material-ui/core/Menu';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { Box, useMediaQuery, useTheme } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
 import { MobileMenu } from './MobileMenu';
 import CloseIcon from '@material-ui/icons/Close';
-const useStyles = makeStyles((theme: Theme) =>
-  createStyles({
-    grow: {
-      flexGrow: 1
-    }
-  })
-);
-
+import styles from './styles.module.css';
+import classNames from 'classnames';
+import Link from 'next/link';
+import HomeIcon from '@material-ui/icons/Home';
+import { useRouter } from 'next/router';
 export default function AppNavBar() {
-  const classes = useStyles();
-
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const handleMobileMenuOpen = () => {
@@ -33,46 +19,81 @@ export default function AppNavBar() {
   };
   const theme = useTheme();
   const smallScreen = useMediaQuery(theme.breakpoints.down('sm'));
-
+  const router = useRouter();
   return (
-    <div className={classes.grow}>
-      <Box
-        position='sticky'
-        style={{
-          backgroundColor: 'transparent',
-          color: 'black',
-          width: '100vw',
-          border: 'none'
-        }}
-      >
+    <Box className={styles.grow} position='static'>
+      <Box className={styles.navbar}>
         <Toolbar>
-          <IconButton>Home</IconButton>
-          <Typography variant='h6' noWrap>
+          <Link href='/'>
+            <HomeIcon />
+          </Link>
+          <Typography variant='h6' noWrap className={styles.navName}>
             Israel Guillermo
           </Typography>
 
           {smallScreen ? (
             <>
-              <div className={classes.grow} />
-              <div>
+              <Box className={styles.grow} />
+              <Box>
                 <IconButton onClick={handleMobileMenuOpen}>
                   {isMobileMenuOpen ? <CloseIcon /> : <MenuIcon />}
                 </IconButton>
-              </div>
+              </Box>
             </>
           ) : (
             <>
-              <div className={classes.grow} />
-              <div>
-                <IconButton>Resume</IconButton>
-                <IconButton>Projects</IconButton>
-                <IconButton>Contact</IconButton>
-              </div>
+              <Box className={styles.grow} />
+              <Box className={styles.navbarButtonContainer}>
+                <Link
+                  style={{
+                    color: router.asPath === '/resume' ? '#e4a92a' : 'inherit'
+                  }}
+                  href='/resume'
+                  className={styles.navbarButton}
+                >
+                  <Typography
+                    variant='subtitle1'
+                    style={{ fontWeight: 'lighter' }}
+                  >
+                    Resume
+                  </Typography>
+                </Link>
+
+                <Link
+                  style={{
+                    color: router.asPath === '/projects' ? '#e4a92a' : 'inherit'
+                  }}
+                  href='/projects'
+                  className={classNames(
+                    styles.middleNavButton,
+                    styles.navbarButton
+                  )}
+                >
+                  <Typography style={{ fontWeight: 'lighter' }}>
+                    Projects
+                  </Typography>
+                </Link>
+
+                <Link
+                  style={{
+                    color: router.asPath === '/contact' ? '#e4a92a' : 'inherit'
+                  }}
+                  href='/contact'
+                  className={styles.navbarButton}
+                >
+                  <Typography
+                    variant='subtitle1'
+                    style={{ fontWeight: 'lighter' }}
+                  >
+                    Contact
+                  </Typography>
+                </Link>
+              </Box>
             </>
           )}
         </Toolbar>
       </Box>
       <MobileMenu open={isMobileMenuOpen} />
-    </div>
+    </Box>
   );
 }
