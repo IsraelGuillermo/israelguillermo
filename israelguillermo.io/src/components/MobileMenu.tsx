@@ -1,14 +1,11 @@
 import {
   Box,
-  IconButton,
   Link,
-  Menu,
-  MenuItem,
   Typography,
   useMediaQuery,
   useTheme
 } from '@material-ui/core';
-import { useRouter } from 'next/router';
+import { useEffect } from 'react';
 import styles from './styles.module.css';
 
 interface Props {
@@ -18,9 +15,13 @@ interface Props {
 export function MobileMenu({ open }: Props) {
   const theme = useTheme();
   const smallScreen = useMediaQuery(theme.breakpoints.down('sm'));
-  const router = useRouter();
+  useEffect(() => {
+    open
+      ? (document.body.style.overflow = 'hidden')
+      : (document.body.style.overflow = 'auto');
+  }, [open]);
   return open && smallScreen ? (
-    <Box className={styles.mobileMenu}>
+    <Box className={styles.mobileMenu} style={{ overflowY: 'auto' }}>
       <>
         <Link
           style={{

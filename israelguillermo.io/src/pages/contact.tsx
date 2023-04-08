@@ -33,7 +33,7 @@ export default function Contact() {
             alignItems: 'center'
           }}
         >
-          <Box style={{ marginRight: 24 }}>
+          <Box style={{ marginRight: 24, marginTop: smallScreen ? 24 : 0 }}>
             <img
               alt='Israel Guillermo'
               src='/israel.JPEG'
