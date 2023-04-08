@@ -147,6 +147,7 @@ export default function ProjectsPage() {
                 alignItems: 'center'
               }}
               src='/chefocus.png'
+              alt='CHEFocus'
             />
           </Box>
           <Box
@@ -202,6 +203,7 @@ export default function ProjectsPage() {
                 alignItems: 'center'
               }}
               src='/weatherDashboard.png'
+              alt='Weather Dashboard'
             />
           </Box>
         </Box>
