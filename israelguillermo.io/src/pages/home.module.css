@@ -33,3 +33,34 @@
 .typography {
   font-family: 'Raleway', sans-serif;
 }
+
+.resumeMainContainer {
+  justify-content: center;
+  align-items: center;
+}
+
+.sectionContainer {
+  display: flex;
+  margin-top: 16px;
+  margin-bottom: 24px;
+  border-bottom: solid grey 1px;
+}
+
+.resumeContainer {
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.infoBox {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+}
+
+.innerInfoBox {
+  max-width: 550px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 16px;
+}

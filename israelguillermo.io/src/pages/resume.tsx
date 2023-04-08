@@ -12,37 +12,22 @@ export default function ResumePage() {
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <link rel='icon' href='/favicon.ico' />
       </Head>
-      <Box
-        style={{
-          justifyContent: 'center',
-          alignItems: 'center'
-        }}
-      >
+      <Box className={styles.resumeMainContainer}>
         <Box
           style={{
             width: '95%'
           }}
         >
-          <Box
-            style={{
-              paddingTop: 24,
-              paddingBottom: 24,
-              marginLeft: 24,
-              textAlign: smallScreen ? 'center' : undefined
-            }}
-          >
+          <Box className={styles.resumeContainer}>
             <Typography style={{ fontFamily: styles.typography }} variant='h3'>
               Resume
             </Typography>
           </Box>
           <Box
+            className={styles.sectionContainer}
             style={{
-              display: 'flex',
               height: smallScreen ? '50%' : '25%',
-              marginTop: 16,
-              marginBottom: 24,
-              flexDirection: smallScreen ? 'column' : 'row',
-              borderBottom: 'solid grey 1px'
+              flexDirection: smallScreen ? 'column' : 'row'
             }}
           >
             <Box
@@ -68,18 +53,11 @@ export default function ResumePage() {
               </Box>
             </Box>
             <Box>
-              <Box
-                style={{
-                  display: 'flex',
-                  width: '100%',
-                  justifyContent: 'flex-end'
-                }}
-              >
+              <Box className={styles.infoBox}>
                 <Typography
                   variant='h6'
                   style={{
                     fontFamily: styles.typography,
-
                     width: '30%'
                   }}
                 >
@@ -87,13 +65,9 @@ export default function ResumePage() {
                 </Typography>
                 <Box
                   style={{
-                    width: smallScreen ? '100%' : '50%',
-                    maxWidth: '550px',
-                    display: 'flex',
-                    justifyContent: 'center',
-                    flexDirection: 'column',
-                    marginBottom: 16
+                    width: smallScreen ? '100%' : '50%'
                   }}
+                  className={styles.innerInfoBox}
                 >
                   <Typography
                     variant='h6'
@@ -172,13 +146,9 @@ export default function ResumePage() {
                 </Typography>
                 <Box
                   style={{
-                    width: smallScreen ? '100%' : '50%',
-                    maxWidth: '550px',
-                    display: 'flex',
-                    justifyContent: 'center',
-                    flexDirection: 'column',
-                    marginBottom: 16
+                    width: smallScreen ? '100%' : '50%'
                   }}
+                  className={styles.innerInfoBox}
                 >
                   <Typography
                     variant='h6'
@@ -245,13 +215,9 @@ export default function ResumePage() {
                 </Typography>
                 <Box
                   style={{
-                    width: smallScreen ? '100%' : '50%',
-                    maxWidth: '550px',
-                    display: 'flex',
-                    justifyContent: 'center',
-                    flexDirection: 'column',
-                    marginBottom: 16
+                    width: smallScreen ? '100%' : '50%'
                   }}
+                  className={styles.innerInfoBox}
                 >
                   <Typography
                     variant='h6'
@@ -303,13 +269,10 @@ export default function ResumePage() {
             </Box>
           </Box>
           <Box
+            className={styles.sectionContainer}
             style={{
-              display: 'flex',
               height: smallScreen ? '50%' : '25%',
-              marginTop: 16,
-              marginBottom: 24,
-              flexDirection: smallScreen ? 'column' : 'row',
-              borderBottom: 'solid grey 1px'
+              flexDirection: smallScreen ? 'column' : 'row'
             }}
           >
             <Box
@@ -353,13 +316,9 @@ export default function ResumePage() {
                   Sept. 2020 - March 2021
                 </Typography>
                 <Box
+                  className={styles.innerInfoBox}
                   style={{
-                    width: smallScreen ? '100%' : '50%',
-                    maxWidth: '550px',
-                    display: 'flex',
-                    justifyContent: 'center',
-                    flexDirection: 'column',
-                    marginBottom: 16
+                    width: smallScreen ? '100%' : '50%'
                   }}
                 >
                   <Typography
@@ -415,13 +374,9 @@ export default function ResumePage() {
                   August 2019 -
                 </Typography>
                 <Box
+                  className={styles.innerInfoBox}
                   style={{
-                    width: smallScreen ? '100%' : '50%',
-                    maxWidth: '550px',
-                    display: 'flex',
-                    justifyContent: 'center',
-                    flexDirection: 'column',
-                    marginBottom: 16
+                    width: smallScreen ? '100%' : '50%'
                   }}
                 >
                   <Typography
@@ -475,13 +430,9 @@ export default function ResumePage() {
                   May 2017 - August 2019
                 </Typography>
                 <Box
+                  className={styles.innerInfoBox}
                   style={{
-                    width: smallScreen ? '100%' : '50%',
-                    maxWidth: '550px',
-                    display: 'flex',
-                    justifyContent: 'center',
-                    flexDirection: 'column',
-                    marginBottom: 16
+                    width: smallScreen ? '100%' : '50%'
                   }}
                 >
                   <Typography
@@ -519,13 +470,10 @@ export default function ResumePage() {
             </Box>
           </Box>
           <Box
+            className={styles.sectionContainer}
             style={{
-              display: 'flex',
               height: smallScreen ? '50%' : '25%',
-              marginTop: 16,
-              marginBottom: 24,
-              flexDirection: smallScreen ? 'column' : 'row',
-              borderBottom: 'solid grey 1px'
+              flexDirection: smallScreen ? 'column' : 'row'
             }}
           >
             <Box
@@ -569,13 +517,9 @@ export default function ResumePage() {
                   I have experience in the following:
                 </Typography>
                 <Box
+                  className={styles.innerInfoBox}
                   style={{
-                    width: smallScreen ? '100%' : '50%',
-                    maxWidth: '550px',
-                    display: 'flex',
-                    justifyContent: 'center',
-                    flexDirection: 'column',
-                    marginBottom: 16
+                    width: smallScreen ? '100%' : '50%'
                   }}
                 >
                   <Typography
@@ -653,13 +597,10 @@ export default function ResumePage() {
             </Box>
           </Box>
           <Box
+            className={styles.sectionContainer}
             style={{
-              display: 'flex',
               height: smallScreen ? '50%' : '25%',
-              marginTop: 16,
-              marginBottom: 24,
-              flexDirection: smallScreen ? 'column' : 'row',
-              borderBottom: 'solid grey 1px'
+              flexDirection: smallScreen ? 'column' : 'row'
             }}
           >
             <Box
@@ -703,13 +644,9 @@ export default function ResumePage() {
                   In my free time I enjoy these things:
                 </Typography>
                 <Box
+                  className={styles.innerInfoBox}
                   style={{
-                    width: smallScreen ? '100%' : '50%',
-                    maxWidth: '550px',
-                    display: 'flex',
-                    justifyContent: 'center',
-                    flexDirection: 'column',
-                    marginBottom: 16
+                    width: smallScreen ? '100%' : '50%'
                   }}
                 >
                   <Typography
