@@ -396,7 +396,7 @@ export default function ResumePage() {
                       fontFamily: styles.typography
                     }}
                   >
-                    - Master's in Project Management
+                    - Master`s in Project Management
                   </Typography>
 
                   <Typography
@@ -452,7 +452,7 @@ export default function ResumePage() {
                       fontFamily: styles.typography
                     }}
                   >
-                    - Bachelor's of Science in Business Administration
+                    - Bachelor`s of Science in Business Administration
                   </Typography>
 
                   <Typography

@@ -3,7 +3,7 @@ import classNames from 'classnames';
 import styles from './home.module.css';
 import { useRouter } from 'next/router';
 
-export function HomePage() {
+export default function HomePage() {
   const theme = useTheme();
   const smallScreen = useMediaQuery(theme.breakpoints.down('sm'));
   const flexDirection = smallScreen ? 'column-reverse' : 'row';
