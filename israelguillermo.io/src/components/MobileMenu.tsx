@@ -20,22 +20,12 @@ export function MobileMenu({ open }: Props) {
   const smallScreen = useMediaQuery(theme.breakpoints.down('sm'));
   const router = useRouter();
   return open && smallScreen ? (
-    <Box
-      style={{
-        height: '100vh',
-        width: '100vw',
-        display: 'flex',
-        alignItems: 'center',
-        flexDirection: 'column',
-        position: 'absolute',
-        backgroundColor: '#f3f3f3',
-        padding: theme.spacing(1)
-      }}
-    >
+    <Box className={styles.mobileMenu}>
       <>
         <Link
           style={{
-            color: 'inherit'
+            color: 'inherit',
+            margin: 8
           }}
           href='/resume'
         >
@@ -46,7 +36,8 @@ export function MobileMenu({ open }: Props) {
 
         <Link
           style={{
-            color: 'inherit'
+            color: 'inherit',
+            margin: 8
           }}
           href='/projects'
         >
@@ -56,7 +47,8 @@ export function MobileMenu({ open }: Props) {
         </Link>
         <Link
           style={{
-            color: 'inherit'
+            color: 'inherit',
+            margin: 8
           }}
           href='/contact'
         >

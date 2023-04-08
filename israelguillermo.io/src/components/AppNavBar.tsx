@@ -26,82 +26,81 @@ export default function AppNavBar() {
   }, [router]);
 
   return (
-    <Box className={styles.grow} position='static'>
-      <Box className={styles.navbar}>
-        <Toolbar>
-          <Link href='/' style={{ textDecoration: 'none' }}>
-            <Typography
-              style={{ fontFamily: styles.typography }}
-              variant='h6'
-              noWrap
-              className={styles.navName}
-            >
-              Israel Guillermo
-            </Typography>
-          </Link>
+    <Box className={styles.navbar}>
+      <Toolbar>
+        <Link href='/' style={{ textDecoration: 'none' }}>
+          <Typography
+            style={{ fontFamily: styles.typography }}
+            variant='h6'
+            noWrap
+            className={styles.navName}
+          >
+            <img src='/favicon.ico' width={20} style={{ marginRight: 8 }} />
+            Israel Guillermo
+          </Typography>
+        </Link>
 
-          {smallScreen ? (
-            <>
-              <Box className={styles.grow} />
-              <Box>
-                <IconButton onClick={handleMobileMenuOpen}>
-                  {isMobileMenuOpen ? <CloseIcon /> : <MenuIcon />}
-                </IconButton>
-              </Box>
-            </>
-          ) : (
-            <>
-              <Box className={styles.grow} />
-              <Box className={styles.navbarButtonContainer}>
-                <Link
-                  style={{
-                    color: router.asPath === '/resume' ? '#e4a92a' : 'inherit'
-                  }}
-                  href='/resume'
-                  className={styles.navbarButton}
+        {smallScreen ? (
+          <>
+            <Box className={styles.grow} />
+            <Box>
+              <IconButton onClick={handleMobileMenuOpen}>
+                {isMobileMenuOpen ? <CloseIcon /> : <MenuIcon />}
+              </IconButton>
+            </Box>
+          </>
+        ) : (
+          <>
+            <Box className={styles.grow} />
+            <Box className={styles.navbarButtonContainer}>
+              <Link
+                style={{
+                  color: router.asPath === '/resume' ? '#e4a92a' : 'inherit'
+                }}
+                href='/resume'
+                className={styles.navbarButton}
+              >
+                <Typography
+                  variant='subtitle1'
+                  style={{ fontWeight: 'lighter' }}
                 >
-                  <Typography
-                    variant='subtitle1'
-                    style={{ fontWeight: 'lighter' }}
-                  >
-                    Resume
-                  </Typography>
-                </Link>
+                  Resume
+                </Typography>
+              </Link>
 
-                <Link
-                  style={{
-                    color: router.asPath === '/projects' ? '#e4a92a' : 'inherit'
-                  }}
-                  href='/projects'
-                  className={classNames(
-                    styles.middleNavButton,
-                    styles.navbarButton
-                  )}
-                >
-                  <Typography style={{ fontWeight: 'lighter' }}>
-                    Projects
-                  </Typography>
-                </Link>
+              <Link
+                style={{
+                  color: router.asPath === '/projects' ? '#e4a92a' : 'inherit'
+                }}
+                href='/projects'
+                className={classNames(
+                  styles.middleNavButton,
+                  styles.navbarButton
+                )}
+              >
+                <Typography style={{ fontWeight: 'lighter' }}>
+                  Projects
+                </Typography>
+              </Link>
 
-                <Link
-                  style={{
-                    color: router.asPath === '/contact' ? '#e4a92a' : 'inherit'
-                  }}
-                  href='/contact'
-                  className={styles.navbarButton}
+              <Link
+                style={{
+                  color: router.asPath === '/contact' ? '#e4a92a' : 'inherit'
+                }}
+                href='/contact'
+                className={styles.navbarButton}
+              >
+                <Typography
+                  variant='subtitle1'
+                  style={{ fontWeight: 'lighter' }}
                 >
-                  <Typography
-                    variant='subtitle1'
-                    style={{ fontWeight: 'lighter' }}
-                  >
-                    Contact
-                  </Typography>
-                </Link>
-              </Box>
-            </>
-          )}
-        </Toolbar>
-      </Box>
+                  Contact
+                </Typography>
+              </Link>
+            </Box>
+          </>
+        )}
+      </Toolbar>
       <MobileMenu open={isMobileMenuOpen} />
     </Box>
   );

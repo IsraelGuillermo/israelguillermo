@@ -2,7 +2,7 @@ import { Box, Typography, useMediaQuery, useTheme } from '@material-ui/core';
 import classNames from 'classnames';
 import styles from './home.module.css';
 import { useRouter } from 'next/router';
-import globalStyles from '../styles/globals.module.css';
+
 export function HomePage() {
   const theme = useTheme();
   const smallScreen = useMediaQuery(theme.breakpoints.down('sm'));
@@ -28,7 +28,7 @@ export function HomePage() {
           alignItems: 'center'
         }}
       >
-        <Box style={{ marginRight: 24, marginTop: 50 }}>
+        <Box style={{ marginRight: 24 }}>
           <img
             alt='Israel Guillermo'
             src='/israel.JPEG'

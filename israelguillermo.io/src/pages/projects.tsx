@@ -14,24 +14,20 @@ export default function ProjectsPage() {
       </Head>
       <Box
         style={{
-          height: '100vh',
-          width: '100%',
-          padding: 24,
-          display: 'flex',
           justifyContent: 'center',
           alignItems: 'center'
         }}
       >
         <Box
           style={{
-            width: '95%',
-            height: '100vh'
+            width: '95%'
           }}
         >
           <Box
             style={{
               paddingTop: 24,
               paddingBottom: 24,
+              marginLeft: 24,
               textAlign: smallScreen ? 'center' : undefined
             }}
           >
