@@ -18,11 +18,7 @@ export default function ProjectsPage() {
           alignItems: 'center'
         }}
       >
-        <Box
-          style={{
-            width: '95%'
-          }}
-        >
+        <Box>
           <Box
             style={{
               paddingTop: 24,
