@@ -41,7 +41,12 @@ export default function ProjectsPage() {
               flexDirection: smallScreen ? 'column' : 'row'
             }}
           >
-            <Box style={{ width: smallScreen ? '100%' : '50%', padding: 16 }}>
+            <Box
+              style={{
+                width: smallScreen ? '100%' : '50%',
+                padding: smallScreen ? 0 : 16
+              }}
+            >
               <Box style={{ paddingBottom: 16 }}>
                 <Typography
                   style={{ fontFamily: styles.typography }}
@@ -96,7 +101,12 @@ export default function ProjectsPage() {
               flexDirection: smallScreen ? 'column' : 'row'
             }}
           >
-            <Box style={{ width: smallScreen ? '100%' : '50%', padding: 16 }}>
+            <Box
+              style={{
+                width: smallScreen ? '100%' : '50%',
+                padding: smallScreen ? 0 : 16
+              }}
+            >
               <Box style={{ paddingBottom: 16 }}>
                 <Typography
                   style={{ fontFamily: styles.typography }}
@@ -152,7 +162,12 @@ export default function ProjectsPage() {
               flexDirection: smallScreen ? 'column' : 'row'
             }}
           >
-            <Box style={{ width: smallScreen ? '100%' : '50%', padding: 16 }}>
+            <Box
+              style={{
+                width: smallScreen ? '100%' : '50%',
+                padding: smallScreen ? 0 : 16
+              }}
+            >
               <Box style={{ paddingBottom: 16 }}>
                 <Typography
                   style={{ fontFamily: styles.typography }}
