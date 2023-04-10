@@ -13,6 +13,10 @@ export default function Home() {
           href='https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap'
           rel='stylesheet'
         />
+        <meta property='og:title' content='Israel Guillermo' />
+        <meta property='og:image' content='/website.png' />
+        <meta property='og:url' content='https://israelguillermo.vercel.app/' />
+        <meta property='og:type' content='website' />
       </Head>
       <main>
         <HomePage />
